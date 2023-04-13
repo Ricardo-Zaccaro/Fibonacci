@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class MyClass {
+    public static void main(String args[]) {
+      int x[]=new int[50];
+      boolean fib=false;
+      Scanner ler = new Scanner(System.in);
+      int n=0;
+      x[0]=0;
+      x[1]=1;
+      for(int i = 2;i<50;i++)
+      {
+        x[i]=x[i-2]+x[i-1];
+        
+      }
+       System.out.printf("Informe um número :\n");
+       n = ler.nextInt();
+        for(int i = 0;i<50;i++)
+      {
+       System.out.println(String.valueOf(x[i]));
+       if(x[i]==n) {
+           fib=true;
+       }
+      }
+      if(fib){
+        System.out.println("numero está na fibonacci"); 
+      }else{
+        System.out.println("numero não está na fibonacci");   
+      } 
+    } 
+}
